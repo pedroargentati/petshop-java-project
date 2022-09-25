@@ -59,10 +59,14 @@ public class ProdutoServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		req.setAttribute("listaProdutos", listaProdutos);
+		this.fillForm(listaProdutos, req);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("produto.jsp");
 		dispatcher.forward(req, resp);
 		
+	}
+	
+	protected void fillForm(List<ProdutoVo> listaProdutos,  HttpServletRequest req) {
+		req.setAttribute("listaProdutos", listaProdutos);
 	}
 
 }
