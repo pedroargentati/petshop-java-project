@@ -32,20 +32,19 @@ public class ProdutoServlet extends HttpServlet {
 		produto.setVl_unitario(Double.valueOf(req.getParameter("vl_unitario")));
 
 		try {
-			
-			
 			Integer seq = produtoDAO.obterMaxSeqProduto();
-			produto.setId_unidade(seq = seq + 1);
-			produto.setId_status(seq = seq + 1);
+			produto.setId_unidade(++seq);
+			produto.setId_status(++seq);
 
 			if (produto != null) {
-				produtoDAO.inserirProduto(produto);
+				produtoDAO.inserirProduto(produto); 
 			}
 			
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-		out.println("<h1> Produto cadastrado com sucesso. </h1>");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("produto.jsp");
+		dispatcher.forward(req, resp);
 
 	}
 	

@@ -48,9 +48,7 @@
 
 				<div class="vl_unitario">
 					<label for="vl_unitario">Valor Unitário: <span class="obg">*</span></label>
-					<input type="number" name="vl_unitario" id="vl_unitario"
-						placeholder="R$ 0,0" pattern="[0-9]+([,\.][0-9]+)?" min="0"
-						step="any" required>
+					<input type="number" name="vl_unitario" id="vl_unitario" placeholder="R$ 0,0" pattern="[0-9]+([,\.][0-9]+)?" min="0" sstep="any" required>
 				</div>
 
 				<hr>
@@ -87,7 +85,7 @@
 				%>
 				<hr>
 				
-				<button name="submit" type="submit" id="contact-btn">Listar</button>
+				<button name="submit" type="submit" id="contact-btn" class="listar">Listar</button>
 				
 
 			</fieldset>

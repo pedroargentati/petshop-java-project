@@ -10,8 +10,8 @@ public abstract class DataAccessObjectAdapter {
 
 	private String driver = "oracle.jdbc.driver.OracleDriver";
 	private String url = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-	private String login = "rm88246";
-	private String senha = "190203";
+	private String login = "??";
+	private String senha = "??";
 	private Connection connection;
 
 	public Connection conectar() {
