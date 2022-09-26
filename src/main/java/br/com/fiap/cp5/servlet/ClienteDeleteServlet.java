@@ -44,6 +44,7 @@ public class ClienteDeleteServlet extends HttpServlet {
 						clientePfDAO.excluirClientePF(id_cliente);
 					}
 				}
+				fillForm(cliente, req);
 				clienteDAO.excluirCliente(cliente);
 				dispatcher.forward(req, resp);
 			} else {
@@ -57,6 +58,10 @@ public class ClienteDeleteServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	protected void fillForm(ClienteVo cliente, HttpServletRequest req) {
+		req.setAttribute("nome_cliente", cliente.getNome_cliente());
 	}
 	
 }

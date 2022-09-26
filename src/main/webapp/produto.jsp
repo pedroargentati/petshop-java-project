@@ -18,7 +18,7 @@
 	<div class="main-title">
 
 		<h1>CheckPoint 5 - Banco de dados - PAS</h1>
-		<h2>Luciano Rubinho</h2>
+		<h2>Luciano</h2>
 
 	</div>
 
